@@ -1,12 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(DraggableObject))]
 public class AppIcon : MonoBehaviour
 {
-    public GameObject windowApp;
+    public Window windowApp;
     private int clicCount;
     void Start()
     {
@@ -23,8 +25,12 @@ public class AppIcon : MonoBehaviour
         }
         else
         {
-            WindowController.Ins.Open(windowApp);
             clicCount = 0;
+            
+            string appName   = transform.GetChild(0).GetComponent<TMP_Text>().text;
+            Sprite appSprite = transform.GetChild(1).GetComponent<Image>().sprite;
+
+           windowApp.Open(appName, appSprite);
         }
     }
 

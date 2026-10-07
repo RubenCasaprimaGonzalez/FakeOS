@@ -6,14 +6,14 @@ public class AsocitedButton : MonoBehaviour
 {
     public GameObject asociateGameObject;
     
-    public void Remove()
+    virtual public void Remove()
     {
         Destroy(asociateGameObject);
         Destroy(gameObject);
     }
 
-    virtual public void OnClic()
+    public void OnClic()
     {
-        throw new System.NotImplementedException();
+        asociateGameObject.transform.SetAsLastSibling();
     }
 }
