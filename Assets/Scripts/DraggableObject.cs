@@ -1,16 +1,17 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+[RequireComponent(typeof(BoxCollider2D))]
 public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     private RectTransform rectTransform;
     private Canvas canvas;
 
     private GridSlot previousSlot;
-    public GridSlot currentSlot;
-    public GridSlot hoveredSlot;
+    [HideInInspector] public GridSlot currentSlot;
+    [HideInInspector] public GridSlot hoveredSlot;
 
-    private Vector2 startPosition;
+    [HideInInspector] public bool isCellMove;
 
     private void Awake()
     {
@@ -21,7 +22,6 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     public void OnBeginDrag(PointerEventData eventData)
     {
         GridManager.ins.dragObject = this;
-        startPosition = rectTransform.anchoredPosition;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -31,6 +31,8 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (!isCellMove) return;
+        
         if (hoveredSlot != null && !hoveredSlot.IsOccupied())
         {
             hoveredSlot.StoreObject(gameObject);
