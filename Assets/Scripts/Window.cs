@@ -24,10 +24,35 @@ public class Window : MonoBehaviour
       gameObject.SetActive(false);
       Destroy(toolButton);
    }
+
+   private void Focus()
+   {
+      if (!gameObject.activeSelf)
+      {
+         gameObject.SetActive(true);
+      }
+      transform.SetAsLastSibling();
+   }
    
    public void OnClic()
    {
-      Debug.Log("si");
-      transform.SetAsLastSibling();
+      Focus();
+   }
+
+   public void Minimize()
+   {
+      gameObject.SetActive(false);
+   }
+
+   public void TryToGainFocus()
+   {
+      if (transform.GetSiblingIndex() + 1 != transform.parent.childCount)
+      {
+         Focus();
+      }
+      else
+      {
+         Minimize();
+      }
    }
 }

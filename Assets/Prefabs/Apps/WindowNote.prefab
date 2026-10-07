@@ -785,7 +785,7 @@ GameObject:
   - component: {fileID: 7563552846960960991}
   - component: {fileID: 5342040155781951052}
   - component: {fileID: 3782556474459169311}
-  - component: {fileID: 3197337454194260991}
+  - component: {fileID: 8392365492907166208}
   m_Layer: 5
   m_Name: WindowNote
   m_TagString: Untagged
@@ -1003,7 +1003,7 @@ MonoBehaviour:
   noteButtomParent: {fileID: 2812084809645418500}
   inputFieldPrefab: {fileID: 6322568454488858551, guid: f5e7905079d1c8c46a3900fe8cf03a7e, type: 3}
   inputFieldParent: {fileID: 8951381410880608086}
---- !u!114 &3197337454194260991
+--- !u!114 &8392365492907166208
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
