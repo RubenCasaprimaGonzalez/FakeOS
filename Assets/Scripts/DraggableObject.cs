@@ -6,6 +6,7 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     private RectTransform rectTransform;
     private Canvas canvas;
 
+    private GridSlot previousSlot;
     public GridSlot currentSlot;
     public GridSlot hoveredSlot;
 
@@ -33,7 +34,7 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         if (hoveredSlot != null && !hoveredSlot.IsOccupied())
         {
             hoveredSlot.StoreObject(gameObject);
-            if(currentSlot != null) currentSlot.StoreObject(null);  // Libera el slot inicial
+            if(previousSlot != null) previousSlot.StoreObject(null);  // Libera el slot inicial
             currentSlot = hoveredSlot;
         }
         else
@@ -42,6 +43,7 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         }
 
         hoveredSlot = null;
+        previousSlot = currentSlot;
         GridManager.ins.dragObject = null;
     }
 
