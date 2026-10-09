@@ -252,7 +252,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 100}
+  m_AnchoredPosition: {x: 36, y: 100}
   m_SizeDelta: {x: 200, y: 170}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &53225237
@@ -489,15 +489,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: a4c9399dc5fc3294cb128c3480056035, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -522,6 +522,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 53225236}
     m_Modifications:
+    - target: {fileID: 513637297621983025, guid: 582614171f72eeb489945a4e0b4ac9e9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3014c70a01351704ba186863dd941c27, type: 3}
     - target: {fileID: 1230839574525990001, guid: 582614171f72eeb489945a4e0b4ac9e9, type: 3}
       propertyPath: windowApp
       value: 
@@ -615,6 +619,30 @@ PrefabInstance:
     - target: {fileID: 5481477053929929778, guid: 582614171f72eeb489945a4e0b4ac9e9, type: 3}
       propertyPath: m_Name
       value: NotesApp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689835021462463535, guid: 582614171f72eeb489945a4e0b4ac9e9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 108
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689835021462463535, guid: 582614171f72eeb489945a4e0b4ac9e9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689835021462463535, guid: 582614171f72eeb489945a4e0b4ac9e9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689835021462463535, guid: 582614171f72eeb489945a4e0b4ac9e9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689835021462463535, guid: 582614171f72eeb489945a4e0b4ac9e9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689835021462463535, guid: 582614171f72eeb489945a4e0b4ac9e9, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1067,13 +1095,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowFolder
       objectReference: {fileID: 0}
-    - target: {fileID: 7353222724510128707, guid: 3eb940ab24f9cf049b38bdbd111200b7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1766563448}
-    - target: {fileID: 7353222724510128707, guid: 3eb940ab24f9cf049b38bdbd111200b7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Close
+    - target: {fileID: 5117208282068588711, guid: 3eb940ab24f9cf049b38bdbd111200b7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1168,9 +1192,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6709066681315444480, guid: 7dcd6a9845a342e43abc5e4f99d0d9dc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6709066681315444480, guid: 7dcd6a9845a342e43abc5e4f99d0d9dc, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7317653656563464099, guid: 7dcd6a9845a342e43abc5e4f99d0d9dc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7317653656563464099, guid: 7dcd6a9845a342e43abc5e4f99d0d9dc, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7317653656563464099, guid: 7dcd6a9845a342e43abc5e4f99d0d9dc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 8615970363757891144, guid: 7dcd6a9845a342e43abc5e4f99d0d9dc, type: 3}
       propertyPath: m_Name
       value: WindowNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 8615970363757891144, guid: 7dcd6a9845a342e43abc5e4f99d0d9dc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
